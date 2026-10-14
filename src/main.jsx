@@ -20,15 +20,15 @@ const services = [
 ];
 
 const projects = [
-  { title: "Industrial Warehouse", type: "Warehouse", size: "Project showcase", image: "/warehouse1.png.jpeg", description: "A sample portfolio layout for a storage and logistics facility." },
-  { title: "Steel Structure Facility", type: "Steel structure", size: "Project showcase", image: "/steal1.png.jpeg", description: "A sample project card for structural steel and site execution work." },
-  { title: "Industrial Building Envelope", type: "Roofing & cladding", size: "Project showcase", image: "/roof1.png.jpeg", description: "A sample portfolio layout for roofing, cladding, and industrial building work." },
+  { title: "Industrial Warehouse", type: "Warehouse", size: "Project showcase", image: `${import.meta.env.BASE_URL}warehouse1.png.jpeg`, description: "A sample portfolio layout for a storage and logistics facility." },
+  { title: "Steel Structure Facility", type: "Steel structure", size: "Project showcase", image: `${import.meta.env.BASE_URL}steal1.png.jpeg`, description: "A sample project card for structural steel and site execution work." },
+  { title: "Industrial Building Envelope", type: "Roofing & cladding", size: "Project showcase", image: `${import.meta.env.BASE_URL}roof1.png.jpeg`, description: "A sample portfolio layout for roofing, cladding, and industrial building work." },
 ];
 
 function Logo({ footer = false }) {
   return (
     <a className={`brand ${footer ? "brand-footer" : ""}`} href="#home" aria-label="TRJE Engineering Solutions home">
-      <img className="brand-logo-image" src="/trjelogo.png" alt="TRJE Engineering Solutions" />
+      <img className="brand-logo-image" src={`${import.meta.env.BASE_URL}trjelogo.png`} alt="TRJE Engineering Solutions" />
     </a>
   );
 }
